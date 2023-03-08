@@ -3,10 +3,11 @@ name: pyEpilepsy Documentation
 on: 
   push:
     branches:
-      - 'master'
+      - master
 
 permissions:
     contents: write
+
 jobs:
   docs:
     runs-on: ubuntu-20.04
@@ -28,7 +29,7 @@ jobs:
       - name: Sphinx build
         shell: bash -el {0}
         run: |
-          sphinx-build doc build
+          sphinx-build docs/source docs/build  
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
