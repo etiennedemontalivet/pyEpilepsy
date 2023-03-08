@@ -2,10 +2,14 @@
 pyEpilepsy
 =============
 
-|GitHub Actions|_ |Codecov|_
+|Tests|_ |Doc|_ |Codecov|_
 
-.. |GitHub Actions| image:: https://github.com/etiennedemontalivet/pyepilepsy/actions/workflows/main/badge.svg
-.. _GitHub Actions: https://github.com/etiennedemontalivet/pyEpilepsy/actions/workflows/main.yml
+.. |Tests| image:: https://github.com/etiennedemontalivet/pyepilepsy/actions/workflows/main.yml/badge.svg
+.. _Tests: https://github.com/etiennedemontalivet/pyEpilepsy/actions/workflows/main.yml
+
+.. |Doc| image:: https://github.com/etiennedemontalivet/pyepilepsy/actions/workflows/documentation.yml/badge.svg
+.. _Doc: https://github.com/etiennedemontalivet/pyEpilepsy/actions/workflows/documentation.yml
+
 
 .. |Codecov| image:: https://codecov.io/gh/etiennedemontalivet/pyEpilepsy/branch/master/graph/badge.svg?token=MH99PGHU1C
 .. _Codecov: https://codecov.io/gh/etiennedemontalivet/pyEpilepsy?branch=master
