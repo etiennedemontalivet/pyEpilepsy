@@ -1,0 +1,46 @@
+name: Testing pyEpilepsy on Ubuntu 20.04
+
+on:
+  push:
+    branches:
+      - '*'
+  pull_request:
+    branches:
+      - '*'
+
+jobs:
+  tests:
+    runs-on: ubuntu-20.04
+    env:
+      CONDA_ENV: 'environment.yml'
+    strategy:
+      matrix:
+        python-version: ["3.8", "3.9", "3.10", "3.11"]
+
+    name: python-${{ matrix.python-version }}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: conda-incubator/setup-miniconda@v2
+        with:
+          activate-environment: 'pyepilepsy'
+          python-version: ${{ matrix.python-version }}
+          environment-file: ${{ env.CONDA_ENV }}
+      - name: Install extra dependencies
+        shell: bash -el {0}
+        run: pip install --upgrade pytest pytest-cov flake8 check-manifest pytest-sugar
+      - name: Lint with flake8
+        shell: bash -el {0}
+        run: |
+          # stop the build if there are Python syntax errors or undefined names
+          flake8 pyepilepsy --count --select=E9,F63,F7,F82 --show-source --statistics
+          # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+          flake8 pyepilepsy --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+      - name: Test with pytest
+        run: |
+          pytest pyepilepsy --cov=pyepilepsy --cov-report=xml --doctest-modules
+      - name: Upload coverage stats
+        uses: codecov/codecov-action@v3
+        with:
+          file: ./coverage.xml
+
+
