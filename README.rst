@@ -17,7 +17,7 @@ pyEpilepsy
 
 This repository provides code for epilepsy seizure forecasting.
 The documentation of the pyEpilepsy module is available at: 
-`documentation <https://etiennedemontalivet.github.io/pyepilepsy/index.html>`_.
+`documentation <https://etiennedemontalivet.github.io/pyEpilepsy>`_.
 
 Installation
 ------------
