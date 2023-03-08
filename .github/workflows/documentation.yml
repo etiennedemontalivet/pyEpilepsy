@@ -3,7 +3,7 @@ name: pyEpilepsy Documentation
 on: 
   push:
     branches:
-      - master
+      - main
 
 permissions:
     contents: write
