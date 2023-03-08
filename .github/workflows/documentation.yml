@@ -1,0 +1,38 @@
+name: pyEpilepsy Documentation
+
+on: 
+  push:
+    branches:
+      - 'master'
+
+permissions:
+    contents: write
+jobs:
+  docs:
+    runs-on: ubuntu-20.04
+    env:
+      CONDA_ENV: 'environment.yml'
+      PYTHON_VERSION: '3.8'
+
+    name: python-${{ env.PYTHON_VERSION }}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: conda-incubator/setup-miniconda@v2
+        with:
+          activate-environment: 'pyepilepsy'
+          python-version: ${{ env.PYTHON_VERSION }}
+          environment-file: ${{ env.CONDA_ENV }}
+      - name: Install extra dependencies
+        shell: bash -el {0}
+        run: pip install --upgrade sphinx numpydoc sphinx_copybutton sphinx_rtd_theme
+      - name: Sphinx build
+        shell: bash -el {0}
+        run: |
+          sphinx-build doc build
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+        with:
+          publish_branch: gh-pages
+          publish_dir: build/
+          force_orphan: true
