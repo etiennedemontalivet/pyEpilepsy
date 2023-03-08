@@ -1,0 +1,30 @@
+﻿pyepilepsy
+==========
+
+.. automodule:: pyepilepsy
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+
+.. autosummary::
+   :toctree:
+   :template: custom-module-template.rst
+   :recursive:
+
+   pyepilepsy.metrics
+

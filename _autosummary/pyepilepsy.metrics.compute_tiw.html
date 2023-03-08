@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pyepilepsy.metrics.compute_tiw &mdash; pyEpilepsy 0.1.1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="pyepilepsy.metrics.compute_sensitivity_chance_pred" href="pyepilepsy.metrics.compute_sensitivity_chance_pred.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            pyEpilepsy
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">pyEpilepsy</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">API Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="pyepilepsy.html">pyepilepsy</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="pyepilepsy.metrics.html">pyepilepsy.metrics</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="pyepilepsy.metrics.compute_ioc.html">pyepilepsy.metrics.compute_ioc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyepilepsy.metrics.compute_sensitivity_chance_pred.html">pyepilepsy.metrics.compute_sensitivity_chance_pred</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">pyepilepsy.metrics.compute_tiw</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">pyEpilepsy</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../api.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="pyepilepsy.html">pyepilepsy</a></li>
+          <li class="breadcrumb-item"><a href="pyepilepsy.metrics.html">pyepilepsy.metrics</a></li>
+      <li class="breadcrumb-item active">pyepilepsy.metrics.compute_tiw</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/_autosummary/pyepilepsy.metrics.compute_tiw.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pyepilepsy-metrics-compute-tiw">
+<h1>pyepilepsy.metrics.compute_tiw<a class="headerlink" href="#pyepilepsy-metrics-compute-tiw" title="Permalink to this heading"></a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyepilepsy.metrics.compute_tiw">
+<span class="sig-prename descclassname"><span class="pre">pyepilepsy.metrics.</span></span><span class="sig-name descname"><span class="pre">compute_tiw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_pred_01</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Series</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epoch_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overlap</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bad_mask</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Series</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pyepilepsy.metrics.compute_tiw" title="Permalink to this definition"></a></dt>
+<dd><p>Extract the time in warning of the current predictions given a tau</p>
+<p>The computation has been optimized using the following approach:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>sort predictions and mask</p></li>
+<li><p>remove <code class="docutils literal notranslate"><span class="pre">bad_mask</span></code> firings</p></li>
+<li><dl class="simple">
+<dt>extract time-continuous predictions. On each block:</dt><dd><ul>
+<li><p>get the firing indexes</p></li>
+<li><p>apply the tiw from last firing index</p></li>
+<li><p>apply the tiw on all <code class="docutils literal notranslate"><span class="pre">tau</span></code> seconds after all firings indexes</p></li>
+<li><p>return the warning block + the last firing index</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>apply <code class="docutils literal notranslate"><span class="pre">bad_mask</span></code> firings again</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>y_pred_01</strong><span class="classifier">pd.Series</span></dt><dd><p>The prediction series filled with 0 and 1. Index must be of type datetime64.</p>
+</dd>
+<dt><strong>tau</strong><span class="classifier">float</span></dt><dd><p>The warning time to fire when a positive/preictal class is detected (in minutes).
+We must have be <code class="docutils literal notranslate"><span class="pre">tau</span> <span class="pre">&gt;=</span> <span class="pre">epoch_size</span></code></p>
+</dd>
+<dt><strong>epoch_size</strong><span class="classifier">float</span></dt><dd><p>The epoch size in seconds</p>
+</dd>
+<dt><strong>overlap</strong><span class="classifier">float</span></dt><dd><p>The overlap between 2 successive epochs in seconds.</p>
+</dd>
+<dt><strong>bad_mask</strong><span class="classifier">pd.Series, optional</span></dt><dd><p>A mask to remove some warning windows (such as bad annotations). Must contains 1 and 0.
+1 is to remove, 0 is to keep. If None, nothing is removed. The default is None.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt>float</dt><dd><p>the duration of time in warning in seconds</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>In a cross-val context, the TiW is probably reduced because a group ends with the ictal
+segment, so if a warning is fired at the end, the time in warning that should be generated
+after the current time segment is not added. BUT, for global results, the time in warning
+is computed again based on all <cite>y_pred_01</cite> tested groups and these missing time in warning
+segments are accounted for.</p>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyepilepsy.metrics</span> <span class="kn">import</span> <span class="n">compute_tiw</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y_pred_arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">datetime_index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">([</span>
+<span class="gp">... </span>    <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="s2">&quot;09:00&quot;</span><span class="p">,</span> <span class="s2">&quot;12:30&quot;</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s2">&quot;30min&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(),</span>
+<span class="gp">... </span>    <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="s2">&quot;14:00&quot;</span><span class="p">,</span> <span class="s2">&quot;19:00&quot;</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s2">&quot;30min&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+<span class="gp">... </span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y_pred_01</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">data</span><span class="o">=</span><span class="n">y_pred_arr</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">index</span><span class="o">=</span><span class="n">datetime_index</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">compute_tiw</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">y_pred_01</span><span class="o">=</span><span class="n">y_pred_01</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">tau</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">epoch_size</span><span class="o">=</span><span class="mi">60</span><span class="o">*</span><span class="mi">40</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">overlap</span><span class="o">=</span><span class="mi">60</span><span class="o">*</span><span class="mi">10</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">bad_mask</span><span class="o">=</span><span class="kc">None</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="go">18000</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">bad_mask</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">data</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+<span class="gp">... </span>    <span class="n">index</span><span class="o">=</span><span class="n">datetime_index</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">compute_tiw</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">y_pred_01</span><span class="o">=</span><span class="n">y_pred_01</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">tau</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">epoch_size</span><span class="o">=</span><span class="mi">60</span><span class="o">*</span><span class="mi">40</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">overlap</span><span class="o">=</span><span class="mi">60</span><span class="o">*</span><span class="mi">10</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">bad_mask</span><span class="o">=</span><span class="n">bad_mask</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="go">16200</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pyepilepsy.metrics.compute_sensitivity_chance_pred.html" class="btn btn-neutral float-left" title="pyepilepsy.metrics.compute_sensitivity_chance_pred" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Etienne de Montalivet.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

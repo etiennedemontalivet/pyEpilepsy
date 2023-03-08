@@ -1,0 +1,33 @@
+pyepilepsy.metrics
+==================
+
+.. automodule:: pyepilepsy.metrics
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+      :nosignatures:
+   
+      compute_ioc
+      compute_sensitivity_chance_pred
+      compute_tiw
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+

@@ -1,0 +1,6 @@
+pyepilepsy.metrics.compute\_sensitivity\_chance\_pred
+=====================================================
+
+.. currentmodule:: pyepilepsy.metrics
+
+.. autofunction:: compute_sensitivity_chance_pred

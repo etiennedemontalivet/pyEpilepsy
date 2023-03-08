@@ -1,0 +1,6 @@
+pyepilepsy.metrics.compute\_ioc
+===============================
+
+.. currentmodule:: pyepilepsy.metrics
+
+.. autofunction:: compute_ioc

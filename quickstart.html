@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pyEpilepsy &mdash; pyEpilepsy 0.1.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API Reference" href="api.html" />
+    <link rel="prev" title="Welcome to pyEpilepsy’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            pyEpilepsy
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">pyEpilepsy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#work-to-be-done">Work to be done</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#contribution">Contribution</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pyEpilepsy</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">pyEpilepsy</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/quickstart.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pyepilepsy">
+<h1>pyEpilepsy<a class="headerlink" href="#pyepilepsy" title="Permalink to this heading"></a></h1>
+<p><a class="reference external" href="https://github.com/etiennedemontalivet/pyEpilepsy/actions/workflows/main.yml"><img alt="Tests" src="https://github.com/etiennedemontalivet/pyepilepsy/actions/workflows/main.yml/badge.svg" /></a> <a class="reference external" href="https://github.com/etiennedemontalivet/pyEpilepsy/actions/workflows/documentation.yml"><img alt="Doc" src="https://github.com/etiennedemontalivet/pyepilepsy/actions/workflows/documentation.yml/badge.svg" /></a> <a class="reference external" href="https://codecov.io/gh/etiennedemontalivet/pyEpilepsy?branch=master"><img alt="Codecov" src="https://codecov.io/gh/etiennedemontalivet/pyEpilepsy/branch/master/graph/badge.svg?token=MH99PGHU1C" /></a></p>
+<p>This repository provides code for epilepsy seizure forecasting.
+The documentation of the pyEpilepsy module is available at:
+<a class="reference external" href="https://etiennedemontalivet.github.io/pyEpilepsy">documentation</a>.</p>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
+<p>To install the package, the simplest way is to use pip to get the latest release:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install pyepilepsy
+</pre></div>
+</div>
+</section>
+<section id="work-to-be-done">
+<h2>Work to be done<a class="headerlink" href="#work-to-be-done" title="Permalink to this heading"></a></h2>
+<p>This repo only covers metrics for seizure forecasting for now. I plan to add some other features such as:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>common databases data parsing to mne format</dt><dd><ul>
+<li><p>chb-mit</p></li>
+<li><p>…</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>data labellisation</dt><dd><ul>
+<li><p>for binary classification (<em>preictal</em> vs <em>interictal</em>)</p></li>
+<li><p>for regression (time before seizure)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>…</p></li>
+</ul>
+</section>
+<section id="contribution">
+<h2>Contribution<a class="headerlink" href="#contribution" title="Permalink to this heading"></a></h2>
+<p>Any contribution is welcomed. If you want to collaborate on this repo, feel free to reach me by private message.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to pyEpilepsy’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="api.html" class="btn btn-neutral float-right" title="API Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Etienne de Montalivet.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

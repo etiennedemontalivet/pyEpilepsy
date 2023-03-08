@@ -1,0 +1,6 @@
+pyepilepsy.metrics.compute\_tiw
+===============================
+
+.. currentmodule:: pyepilepsy.metrics
+
+.. autofunction:: compute_tiw
